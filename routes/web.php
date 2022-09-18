@@ -20,8 +20,9 @@ Route::get('/', function () {
 
 // use of group
 Route::controller(DemoController::class)->group(function(){
-    Route::get('/about', 'Index')->name('myabout'); //use of name route
+    Route::get('/about', 'Index')->name('myabout')->middleware('check'); //use of name route
     Route::get('/contact', 'Contact');
 });
 
 // Route::get('/about', [DemoController::class, 'Index']);
+// https://meet.google/https://meet.google/qws-bero-sac
